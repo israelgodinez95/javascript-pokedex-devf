@@ -2,7 +2,7 @@
   /*box-sizing: border-box;
     outline: 2px solid limegreen !important;   
 */
-}
+  }
 
 html,
 body {
@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Pixeboy;
 }
 
 body {
@@ -21,6 +22,123 @@ body {
   font-family: Pixeboy;
   src: url(./others/Pixeboy-z8XGD.ttf);
 }
+
+#pad-div{
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pad-div-inside{
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.button-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.button-container {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.button-pad button {
+  padding: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border-radius: 0px;
+}
+
+.button-up {
+  border-top: 2px solid rgb(70, 70, 70);
+  border-left: 2px solid rgb(70, 70, 70);
+  border-bottom: 0;
+  border-right: 2px solid black;
+}
+
+.button-left {
+  border-top: 2px solid rgb(70, 70, 70);
+  border-left: 2px solid rgb(70, 70, 70);
+  border-bottom: 2px solid black;;
+  border-right: 0;
+}
+
+.button-right {
+  border-top: 2px solid rgb(70, 70, 70);
+  border-left: 0;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.button-middle{
+  border:  none;
+}
+
+.button-down {
+  border-top: 2px solid black;
+  border-right: 2px solid rgb(70, 70, 70);
+  border-bottom: 0;
+  border-left: 2px solid black;
+  transform: rotate(180deg);
+}
+
+.button-up:active{
+  background-image: linear-gradient(to bottom, rgb(85, 85, 85),#ddd,#ccc);
+}
+
+.button-left:active{
+  background-image: linear-gradient(to right, rgb(85, 85, 85),#ddd,#ccc);
+}
+
+.button-right:active{
+  background-image: linear-gradient(to left, rgb(85, 85, 85),#ddd,#ccc);
+}
+
+.button-down:active{
+  background-image: linear-gradient(to bottom, rgb(85, 85, 85),#ddd,#ccc);
+}
+
+#main-div{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pad-div{
+  padding: 0;
+  margin: 0;
+}
+
+#pokedex-div{
+  padding: 0;
+  margin: 0;
+}
+
+#buttons-div{
+  padding: 0;
+  margin: 0;
+  display: flex;  
+} 
+
 
 #pokedex-background {
   position: fixed;
@@ -40,6 +158,7 @@ body {
   z-index: 2;
   width: 700px;
   height: 700px;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -135,6 +254,27 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-head{
+  margin: 0;
+  padding: 0;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.card-body{
+  margin: 0;
+  padding: 0;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #pokemon-body-right {
@@ -142,9 +282,55 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   height: 100%;
   width: 50%;
 }
+
+#pokemon-body-right .container{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 20px 0 0 20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+
+#pokemon-list-1, #pokemon-list-7{
+  position: relative;
+  z-index: 2;
+  width: 260px;
+  opacity: 0.4;
+}
+
+#pokemon-list-2, #pokemon-list-6{
+  position: relative;
+  z-index: 3;
+  width: 290px;
+  opacity: 0.6;
+}
+
+
+#pokemon-list-3, #pokemon-list-5{
+  position: relative;
+  z-index: 4;
+  width: 320px;
+  opacity: 0.8;
+}
+
+
+#pokemon-list-4{
+  position: relative;
+  z-index: 5;
+  margin-top: 10px;
+}
+
+
 
 #pokedex-stats {
   display: flex;
@@ -178,4 +364,47 @@ body {
   font-family: Pixeboy;
   margin: 0;
   font-size: xx-large;
+}
+
+#buttons-div{
+  margin: 0;
+  padding: 0;
+  height: 700px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#buttons-div-inside{
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center
+}
+
+#btn-a{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+#btn-b{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+
+button{
+  background-color: #ccc;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  color:#ccc;
+  font-weight: 900;
+  font-size: x-large;
+  text-shadow: 2px 2px 0px rgb(87, 87, 87);
 }

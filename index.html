@@ -12,40 +12,88 @@
 
 <body>
 
-  <div id="pokedex-background" class="container"></div>
+  <div id="main-div" class="container">
 
-  <div id="pokedex-display" class="container">
-    <div id="pokedex-navbar" class="container">
-      <div id="pokedex-navbar-title" class="container">
-        <h1 id="pokedex-navbar-title-h1">POKéDEX</h1>
+    <div id="pad-div" class="container">
+
+      <div id="pad-div-inside" class="container">
+
+        <div class="button-pad">
+          <button class="button-up btn-previous">^</button>
+          <div class="button-container">
+            <button class="button-left btn-previous"><</button>
+            <button class="button-middle"></button>
+            <button class="button-right btn-next">></button>
+          </div>
+          <button class="button-down btn-next">^</button>
+        </div>
+
       </div>
     </div>
-    <div id="pokedex-body" class="container">
-      <div id="pokemon-body-left" class="container">
-        <div id="pokemon-image-div" class="container">
-          <div id="pokemon-image" class="container">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Nombre del pokemon</h5>
-                <p class="card-text">Nombre y tipo del pokémon</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
+
+    <div id="pokedex-div" class="container">
+      <div id="pokedex-background" class="container">
+
+      </div>
+
+      <div id="pokedex-display" class="container">
+        <div id="pokedex-navbar" class="container">
+          <div id="pokedex-navbar-title" class="container">
+            <h1 id="pokedex-navbar-title-h1">POKéDEX</h1>
+          </div>
+        </div>
+        <div id="pokedex-body" class="container">
+          <div id="pokemon-body-left" class="container">
+            <div id="pokemon-image-div" class="container">
+              <div id="pokemon-image" class="container">
+                <div class="card">
+                  <div class="card-head">
+                    <img src="" alt="..." style="width: 200px; height: auto;">
+                  </div>
+                  <div class="card-body">
+                    <h3 id="pokemon-name" class="card-title">Nombre del pokemon</h3>
+                    <p id="pokemon-type" class="card-text" style="font-size: large;"></p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div id="pokemon-body-right" class="container">
+            <div id="pokemon-list-1" class="container">"id='pokemon-list-1'"</div>
+            <div id="pokemon-list-2" class="container">"id='pokemon-list-2'"</div>
+            <div id="pokemon-list-3" class="container">"id='pokemon-list-3'"</div>
+            <div id="pokemon-list-4" class="container">"id='pokemon-list-4'"</div>
+            <div id="pokemon-list-5" class="container">"id='pokemon-list-5'"</div>
+            <div id="pokemon-list-6" class="container">"id='pokemon-list-6'"</div>
+            <div id="pokemon-list-7" class="container">"id='pokemon-list-7'"</div>
+          </div>
+        </div>
+        <div id="pokedex-stats" class="container"></div>
+        <div id="pokedex-footer" class="container">
+          <div id="pokedex-footer-title" class="container">
+            <h1 id="pokedex-footer-title-h1">PRESS A QUIT</h1>
+          </div>
         </div>
       </div>
-      <div id="pokemon-body-right" class="container">
+    </div>
 
+    <div id="buttons-div" class="container">
+      <div id="buttons-div-inside" class="container">
+        <div id="btn-a">
+          <button>
+            A
+          </button>
+        </div>
+        <div id="btn-b">
+          <button>
+            B
+          </button>
+        
+        </div>
       </div>
-    </div>
-    <div id="pokedex-stats" class="container"></div>
-    <div id="pokedex-footer" class="container">
-      <div id="pokedex-footer-title" class="container">
-        <h1 id="pokedex-footer-title-h1">PRESS A QUIT</h1>
-      </div>
-    </div>
+    </div>  
   </div>
+
 
 
   <script src="./main.js"></script>
