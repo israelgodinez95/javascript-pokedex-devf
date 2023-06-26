@@ -21,8 +21,9 @@
         <div class="button-pad">
           <button class="button-up btn-previous">^</button>
           <div class="button-container">
-            <button class="button-left btn-previous"><</button>
-            <button class="button-middle"></button>
+            <button class="button-left btn-previous">
+              < <button class="button-middle">
+            </button>
             <button class="button-right btn-next">></button>
           </div>
           <button class="button-down btn-next">^</button>
@@ -68,8 +69,34 @@
             <div id="pokemon-list-7" class="container">"id='pokemon-list-7'"</div>
           </div>
         </div>
-        <div id="pokedex-stats" class="container"></div>
+        <div id="pokedex-stats" class="container">
+          <!-- Modal -->
+          <div class="modal-dialog oculto">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">More Info:</h1>
+              </div>
+              <div class="modal-body">
+                <div id="weight-div">
+                  <p>Peso: </p>
+                  <p id="weight-info"></p>
+                </div>
+                <div id="moves-div">
+                  <p>Moves: </p>
+                  <ul id="moves-info">
+
+                  </ul>
+                </div>
+                <div id="btn-close">
+                  <button id="btn-close-modal" type="button" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="pokedex-footer" class="container">
+
           <div id="pokedex-footer-title" class="container">
             <h1 id="pokedex-footer-title-h1">PRESS A QUIT</h1>
           </div>
@@ -80,18 +107,18 @@
     <div id="buttons-div" class="container">
       <div id="buttons-div-inside" class="container">
         <div id="btn-a">
-          <button>
+          <button id="btn-a-open">
             A
           </button>
         </div>
         <div id="btn-b">
-          <button>
+          <button id="btn-b-close">
             B
           </button>
-        
+
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 
 
