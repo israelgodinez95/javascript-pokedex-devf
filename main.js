@@ -24,11 +24,16 @@ const movesP = document.getElementById('moves-info');
 const btnCloseModal = document.getElementById('btn-close-modal');
 const btnA = document.getElementById('btn-a-open');
 const btnB = document.getElementById('btn-b-close');
+const searchBar = document.getElementsByTagName('span')[0];
+const searchBarBody = document.getElementById('pokedex-navbar-body');
+const searchContainer = document.getElementsByClassName('search-container')[0];
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("btn-search");
 
 let pokeIndex = 1; //PokeIndex es el numero del pokemon en el que iniciara la pagina
 let url = 'https://pokeapi.co/api/v2/pokemon/'; //Url para hacer uso de la funcion fetch 
 
-//Funcion para hacer la peticion y colocar la imagen del pokemon correspondiente en la pagina
+//Funcion para hacer la peticion y colocar la imagen del pokemon correspondiente en la pagina, ademas del peso y los movimientos en el modal (ocultos)
 async function displayPokeImage(index) {
     let newIndex2 = evaluateIndex(index);
     const pokemon = fetch(url + newIndex2)
@@ -76,7 +81,6 @@ async function logPokeInfo(index, position) {
         })
         .then(data => {
             position.textContent = data.id + " : " + data.name.toUpperCase();
-
         })
         .catch(error => {
             console.log(error);
@@ -142,3 +146,39 @@ btnA.addEventListener(('click'), function () {
 btnB.addEventListener(('click'), function () {
     modalDiv.classList.add('oculto');
 })
+searchBar.addEventListener(('click'), function () {
+    searchBarBody.style.width="250px";
+    searchContainer.style.display='flex';
+})
+
+//Event Listeners para buscar el pokemon ingresado por el usuario en un input (enter y boton)
+searchInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      let searchTerm = searchInput.value.toLowerCase();
+        console.log(searchTerm);
+        displayPokeImage(searchTerm);
+        logPokeInfo(searchTerm, pokeArray[3]);
+        
+      // console.log("Término de búsqueda:", searchTerm);
+      // Realiza otras acciones con el término de búsqueda aquí
+      searchBarBody.style.width="50px";
+    searchContainer.style.display='none';
+    searchInput.value='';
+    }
+  });
+
+searchButton.addEventListener(('click'), function(event) {
+    event.preventDefault();
+      let searchTerm = searchInput.value.toLowerCase();
+        console.log(searchTerm);
+        displayPokeImage(searchTerm);
+        logPokeInfo(searchTerm, pokeArray[3]);
+        
+      // console.log("Término de búsqueda:", searchTerm);
+      // Realiza otras acciones con el término de búsqueda aquí
+      searchBarBody.style.width="50px";
+    searchContainer.style.display='none';
+    searchInput.value='';
+    
+  });
+
