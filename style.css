@@ -15,11 +15,12 @@ body {
 }
 
 body {
-  background-color: rgb(224, 67, 67);
+  background-image: linear-gradient(rgb(15, 102, 190),rgb(167, 190, 213), rgb(34, 26, 38));
+  
 }
 
 @font-face {
-  font-family: Pixeboy;
+  font-family: 'Pixeboy';
   src: url(./others/Pixeboy-z8XGD.ttf);
 }
 
@@ -67,8 +68,8 @@ body {
 }
 
 .button-up {
-  border-top: 2px solid rgb(70, 70, 70);
-  border-left: 2px solid rgb(70, 70, 70);
+  border-top: 2px solid rgba(70, 70, 70);
+  border-left: 2px solid rgba(70, 70, 70);
   border-bottom: 0;
   border-right: 2px solid black;
 }

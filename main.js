@@ -136,10 +136,7 @@ for (let btnPreviousIndex = 0; btnPreviousIndex < previousPokemon.length; btnPre
 cardDiv.addEventListener(('click'), function () {
     modalDiv.classList.remove('oculto');
 })
-btnCloseModal.addEventListener(('click'), function () {
-    //modalDiv.style.display = "none";
-    modalDiv.classList.add('oculto');
-})
+
 btnA.addEventListener(('click'), function () {
     modalDiv.classList.remove('oculto');
 })
